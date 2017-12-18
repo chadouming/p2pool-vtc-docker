@@ -36,6 +36,6 @@ ENV NET vertcoin2
 
 
 # expose mining port
-EXPOSE 9171 9346
+EXPOSE 9171 9181 9346
 
 ENTRYPOINT ["/init.sh"]
