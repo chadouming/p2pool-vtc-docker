@@ -15,4 +15,15 @@ cat <<EOF > /root/.vertcoin/vertcoin.conf
   rpcpassword=$RPC_PASSWORD
 EOF
 
-python /p2pool-vtc/run_p2pool.py --net $NET --datadir /data -f $FEE --bitcoind-address $VERTCOIND_HOST --bitcoind-rpc-port $VERTCOIND_HOST_PORT --max-conns $MAX_CONNECTIONS -a $FEE_ADDRESS --p2pool-port 9346 --worker-port 9171
+# Set the worker port for the correct network
+# If network 1, 9171, if network2 9181, default to 9181 for now
+
+if [ $NET = 'vertcoin' ]; then
+  $WORKER_PORT=9171
+elif [ $NET = 'vertcoin2' ]; then
+  $WORKER_PORT=9181
+else
+  $WORKER_PORT=9181
+fi
+
+python /p2pool-vtc/run_p2pool.py --net $NET --datadir /data -f $FEE --bitcoind-address $VERTCOIND_HOST --bitcoind-rpc-port $VERTCOIND_HOST_PORT --max-conns $MAX_CONNECTIONS -a $FEE_ADDRESS --p2pool-port 9346 --worker-port $WORKER_PORT
