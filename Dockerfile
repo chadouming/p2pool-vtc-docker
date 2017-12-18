@@ -3,7 +3,7 @@ FROM debian:stable-slim
 MAINTAINER joeknock
 
 # update container and install dependencies
-RUN apt update && apt install -y \
+RUN apt-get update && apt-get install -y \
   git \
   python python-pip
 
@@ -14,7 +14,7 @@ RUN chmod +x /init.sh && \
     git clone https://github.com/vertcoin/p2pool-vtc.git && \
     cd p2pool-vtc/ && \
     rm -rf web-static/ && \
-    git https://github.com/justino/p2pool-ui-punchy.git && \
+    git clone https://github.com/justino/p2pool-ui-punchy.git && \
     mv p2pool-ui-punchy/ web-static/ && \
     pip install -r requirements.txt && \
     cd lyra2re-hash-python && \
