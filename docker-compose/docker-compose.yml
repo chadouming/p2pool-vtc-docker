@@ -33,7 +33,7 @@ services:
         aliases:
           - p2pool
     ports:
-      - '9171:9171'
+      - '9181:9181'
     environment:
       RPC_USER: $RPC_USER
       RPC_PASSWORD: $RPC_PASSWORD
