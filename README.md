@@ -83,6 +83,6 @@ If you are feeling fancy, show me some support! Always appreciated, never requir
 
 VTC: Vxi1ZRH74dUzJ31djx1Bu48rmfXmKNHzck
 
-ETH: 0xCBf45d1Ac796012Ea096D26d796aD5d1E16817c1
+ETH: knocknet.eth
 
 DOGE: DBVGr1SiwSJbJSjG4eMgAZ6PfSTpwXfSPF
