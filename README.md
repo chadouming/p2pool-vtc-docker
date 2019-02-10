@@ -43,7 +43,7 @@ docker run -d --name p2pool-vtc \
   -e RPC_PASSWORD=[rpcpassword]
   -e VERTCOIND_HOST=[IP of vertcoind host]
   -e FEE=[mining fee]
-  joeknock90/p2pool-vtc:latest
+  firrae/p2pool-vtc:latest
 ```
 
 If you have only just run vertcoind, it can take a while to start working, especially if you have to download the blocks from the blockchain. It will also take a while to load the block index when restarting the vertcoind container.
@@ -81,8 +81,4 @@ MIT
 # Donate?
 If you are feeling fancy, show me some support! Always appreciated, never required.
 
-VTC: Vxi1ZRH74dUzJ31djx1Bu48rmfXmKNHzck
-
-ETH: knocknet.eth
-
-DOGE: DBVGr1SiwSJbJSjG4eMgAZ6PfSTpwXfSPF
+VTC: 3A7yAVd6eqcfn879sLx8nNj28aJLoaKgZr
