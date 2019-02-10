@@ -11,7 +11,7 @@ ADD src/init.sh /init.sh
 
 # download python source files
 RUN chmod +x /init.sh && \
-    git clone https://github.com/vertcoin/p2pool-vtc.git && \
+    git clone https://github.com/vertcoin-project/p2pool-vtc.git && \
     cd p2pool-vtc/ && \
     rm -rf web-static/ && \
     git clone https://github.com/justino/p2pool-ui-punchy.git && \
