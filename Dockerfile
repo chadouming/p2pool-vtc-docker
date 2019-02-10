@@ -5,7 +5,7 @@ MAINTAINER firrae
 # update container and install dependencies
 RUN apt-get update && apt-get install -y \
   git \
-  python python-pip
+  python-rrdtool python-pygame python-scipy python-twisted python-twisted-web python-imaging
 
 ADD src/init.sh /init.sh
 
