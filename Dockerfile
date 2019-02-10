@@ -1,6 +1,6 @@
 # build image from small debian
 FROM debian:stable-slim
-MAINTAINER joeknock
+MAINTAINER firrae
 
 # update container and install dependencies
 RUN apt-get update && apt-get install -y \
