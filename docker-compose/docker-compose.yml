@@ -25,7 +25,7 @@ services:
     command: -rpcuser=$RPC_USER -rpcpassword=$RPC_PASSWORD
 
   p2pool:
-    image: joeknock90/p2pool-vtc
+    image: firrae/p2pool-vtc
     env_file:
       - .env
     networks:
