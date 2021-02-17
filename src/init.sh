@@ -26,4 +26,4 @@ else
   export WORKER_PORT=9181
 fi
 
-python /p2pool-vtc/run_p2pool.py --net $NET --datadir /data -f $FEE --bitcoind-address $VERTCOIND_HOST --bitcoind-rpc-port $VERTCOIND_HOST_PORT --max-conns $MAX_CONNECTIONS -a $FEE_ADDRESS --p2pool-port 9346 --worker-port $WORKER_PORT
+python /src/p2pool-vtc/run_p2pool.py --net $NET --datadir /data -f $FEE --bitcoind-address $VERTCOIND_HOST --bitcoind-rpc-port $VERTCOIND_HOST_PORT --max-conns $MAX_CONNECTIONS -a $FEE_ADDRESS --p2pool-port 9346 --worker-port $WORKER_PORT
