@@ -8,6 +8,8 @@ if [ ! -d /root/.vertcoin ]; then
   mkdir /root/.vertcoin
 fi
 
+ln -s /data/verthash.dat verthash.dat
+
 # create the file whether it exists or not
 cat <<EOF > /root/.vertcoin/vertcoin.conf
   server=1
