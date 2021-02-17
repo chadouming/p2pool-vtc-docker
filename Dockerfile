@@ -3,7 +3,7 @@ FROM debian:stable-slim
 MAINTAINER firrae
 
 # update container and install dependencies
-RUN apt-get -y update && apt-get install -y python-rrdtool python-pygame python-scipy python-twisted python-twisted-web python-pil git make
+RUN apt-get -y update && apt-get install -y python-rrdtool python-pygame python-scipy python-twisted python-twisted-web python-pil python-setuptools git make
 
 ADD src/init.sh /init.sh
 RUN chmod +x /init.sh
