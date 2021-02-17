@@ -11,8 +11,11 @@ ADD src/init.sh /init.sh
 
 # download python source files
 RUN chmod +x /init.sh && \
-    git clone https://github.com/vertcoin-project/p2pool-vtc.git && \
+    git clone https://github.com/vertcoin/p2pool-vtc.git && \
     cd p2pool-vtc/ && \
+    rm -rf web-static/ && \
+    git clone https://github.com/hardcpp/P2PoolExtendedFrontEnd.git && \
+    mv P2PoolExtendedFrontEnd/ web-static/ && \
     pip install -r requirements.txt && \
     cd lyra2re-hash-python && \
     git submodule init && git submodule update && \
