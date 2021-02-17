@@ -5,7 +5,7 @@ MAINTAINER firrae
 # update container and install dependencies
 RUN apt-get update && apt-get install -y \
   git \
-  python python-pip python-rrdtool python-pygame python-scipy python-twisted python-twisted-web python-pil
+  python python-pip python-rrdtool python-pygame python-scipy python-twisted python-twisted-web python-pil python-imaging
 
 ADD src/init.sh /init.sh
 
@@ -13,8 +13,6 @@ ADD src/init.sh /init.sh
 RUN chmod +x /init.sh && \
     git clone https://github.com/vertcoin-project/p2pool-vtc.git && \
     cd p2pool-vtc/ && \
-    git clone https://github.com/hardcpp/P2PoolExtendedFrontEnd.git && \
-    mv P2PoolExtendedFrontEnd/ web-static/ && \
     pip install -r requirements.txt && \
     cd lyra2re-hash-python && \
     git submodule init && git submodule update && \
