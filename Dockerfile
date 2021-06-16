@@ -18,11 +18,10 @@ WORKDIR /src/verthash-pospace
 RUN make all
 RUN python setup.py install
 WORKDIR /src/
-RUN git clone https://github.com/vertcoin-project/p2pool-vtc.git && \
+RUN git clone https://github.com/chadouming/p2pool-vtc.git && \
     cd p2pool-vtc/ && \
     rm -rf web-static/ && \
-    git clone https://github.com/hardcpp/P2PoolExtendedFrontEnd.git && \
-    mv P2PoolExtendedFrontEnd/ web-static/ && \
+    git clone https://github.com/chadouming/p2pool-ui-punchy.git web-static && \
     pip install -r requirements.txt && \
     cd lyra2re-hash-python && \
     git submodule init && git submodule update && \
